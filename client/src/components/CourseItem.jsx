@@ -1,8 +1,8 @@
 import React from 'react';
 
-function CourseItem({ course }) {
+function CourseItem({ course, showPage }) {
   return (
-    <div className="Course-item">
+    <div className="Course-item" onClick={() => showPage()}>
       <p>{course.name} </p>
       <p>by: {course.owner}</p>
     </div>

@@ -1,16 +1,64 @@
 import React from 'react';
 import CourseItem from './CourseItem';
 
-const CourseList = () => {
+const CourseList = ({ renderPage }) => {
   const courses = [
-    { id: 0, name: 'my course #0', owner: 'david' },
-    { id: 1, name: 'my course #1', owner: 'david' },
-    { id: 2, name: 'my course #2', owner: 'david' },
-    { id: 3, name: 'my course #3', owner: 'david' },
-    { id: 4, name: 'my course #4', owner: 'david' },
-    { id: 5, name: 'my course #5', owner: 'david' },
-    { id: 6, name: 'my course #6', owner: 'david' },
-    { id: 7, name: 'my course #7', owner: 'david' },
+    {
+      id: 0,
+      name: 'my course #0',
+      owner: 'david',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident enim illum ratione eos praesentium dolores veritatis, atque exercitationem vero doloribus temporibus qui mollitia facere repudiandae ut tenetur quis nemo possimus.',
+    },
+    {
+      id: 1,
+      name: 'my course #1',
+      owner: 'david',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident enim illum ratione eos praesentium dolores veritatis, atque exercitationem vero doloribus temporibus qui mollitia facere repudiandae ut tenetur quis nemo possimus.',
+    },
+    {
+      id: 2,
+      name: 'my course #2',
+      owner: 'david',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident enim illum ratione eos praesentium dolores veritatis, atque exercitationem vero doloribus temporibus qui mollitia facere repudiandae ut tenetur quis nemo possimus.',
+    },
+    {
+      id: 3,
+      name: 'my course #3',
+      owner: 'david',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident enim illum ratione eos praesentium dolores veritatis, atque exercitationem vero doloribus temporibus qui mollitia facere repudiandae ut tenetur quis nemo possimus.',
+    },
+    {
+      id: 4,
+      name: 'my course #4',
+      owner: 'david',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident enim illum ratione eos praesentium dolores veritatis, atque exercitationem vero doloribus temporibus qui mollitia facere repudiandae ut tenetur quis nemo possimus.',
+    },
+    {
+      id: 5,
+      name: 'my course #5',
+      owner: 'david',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident enim illum ratione eos praesentium dolores veritatis, atque exercitationem vero doloribus temporibus qui mollitia facere repudiandae ut tenetur quis nemo possimus.',
+    },
+    {
+      id: 6,
+      name: 'my course #6',
+      owner: 'david',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident enim illum ratione eos praesentium dolores veritatis, atque exercitationem vero doloribus temporibus qui mollitia facere repudiandae ut tenetur quis nemo possimus.',
+    },
+    {
+      id: 7,
+      name: 'my course #7',
+      owner: 'david',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident enim illum ratione eos praesentium dolores veritatis, atque exercitationem vero doloribus temporibus qui mollitia facere repudiandae ut tenetur quis nemo possimus.',
+    },
   ];
 
   return (
@@ -18,7 +66,7 @@ const CourseList = () => {
       <ul>
         {courses.map(c => (
           <li>
-            <CourseItem course={c} />
+            <CourseItem course={c} showPage={() => renderPage(c)} />
           </li>
         ))}
       </ul>
