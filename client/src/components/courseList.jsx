@@ -1,6 +1,6 @@
 import React from 'react';
 
-function courseList() {
+const CourseList = () => {
   const courses = [
     { id: 0, name: 'my course #0', owner: 'david' },
     { id: 1, name: 'my course #1', owner: 'david' },
@@ -13,6 +13,6 @@ function courseList() {
   ];
 
   return <div className="Course-list">adsasd</div>;
-}
+};
 
-export default courseList;
+export default CourseList;
