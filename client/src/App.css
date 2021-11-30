@@ -13,15 +13,39 @@
   }
 }
 
+.App-header-item {
+  width: auto;
+  display: table-cell;
+}
+
 .App-header {
+  width: 100%;
+  margin: auto auto;
   background-color: #282c34;
   min-height: 20vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  align-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
+  display: table;
+  table-layout: fixed;
+}
+
+.App-header button {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  background: none;
+  border: none;
+}
+
+.App-header button:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 .App-link {
@@ -35,4 +59,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.divider{
+  width:40px;
+  height:auto;
+  display:inline-block;
 }
