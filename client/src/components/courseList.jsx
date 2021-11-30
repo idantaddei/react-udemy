@@ -1,4 +1,5 @@
 import React from 'react';
+import CourseItem from './CourseItem';
 
 const CourseList = () => {
   const courses = [
@@ -12,7 +13,17 @@ const CourseList = () => {
     { id: 7, name: 'my course #7', owner: 'david' },
   ];
 
-  return <div className="Course-list">adsasd</div>;
+  return (
+    <div className="Course-list">
+      <ul>
+        {courses.map(c => (
+          <li>
+            <CourseItem course={c} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default CourseList;
