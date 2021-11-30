@@ -1,4 +1,17 @@
-.Course-list {
-  background-color: blue;
-  border: solid 1px red;
+.Course-list ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Course-item {
+  min-width: 200px;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 10px 8px;
+}
+
+.Course-item:hover {
+  background-color: red;
+  cursor: pointer;
 }
